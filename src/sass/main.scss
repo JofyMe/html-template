@@ -1,8 +1,12 @@
-body {
-  margin: 0;
-  padding: 0;
-}
+// DEFAULT
+@import "default.scss";
+@import "variables.scss";
 
-h1 {
-  color: pink;
-}
+
+//HEADER
+@import "components/template/header.scss";
+
+//PAGES
+
+//FOOTER
+@import "components/template/footer.scss";
