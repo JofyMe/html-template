@@ -1,5 +1,3 @@
-# html-template
-
 # HTML TEMPLATE
 
 Project assembler template for layout and further convenient work
