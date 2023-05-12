@@ -16,7 +16,7 @@
   \************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\ndocument.querySelector('.header__burger').addEventListener('click', function() {\r\n    this.classList.toggle('active');\r\n    document.querySelector('.header__navbar').classList.toggle('open')\r\n})\n\n//# sourceURL=webpack://html-template/./src/js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n// This script adds an animation from the library to the first element in each section\r\nAOS.init();\r\nconst sections = document.getElementsByTagName(\"section\");\r\nfor (const section of sections) {\r\n  section.firstElementChild.setAttribute(\"data-aos\", \"fade-up\");\r\n  section.firstElementChild.setAttribute(\"data-aos-duration\", 1000);\r\n}\r\n\r\n//This script adds an open class for further animation\r\nconst burger = document.querySelector(\".header__burger\");\r\nconst navbar = document.querySelector(\".header__navbar\");\r\n\r\nburger.addEventListener(\"click\", (e) => {\r\n  e.preventDefault();\r\n\r\n  burger.classList.toggle(\"active\");\r\n  navbar.classList.toggle(\"open\");\r\n});\r\n\n\n//# sourceURL=webpack://html-template/./src/js/main.js?");
 
 /***/ })
 

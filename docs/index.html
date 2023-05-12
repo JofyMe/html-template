@@ -10,12 +10,24 @@
     <!-- STYLES -->
     <link rel="stylesheet" href="css/main.css" />
 
+    <!-- ANIMATION -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"  />
+
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
+    />
+
+    <!-- ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASoz E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
   </head>
   <body>
@@ -53,18 +65,24 @@
         </div>
       </header>
       <main>
-        <section class="hero container">
-          <h1>H1 Paragraph H1</h1>
-          <h2>H2 Paragraph H2</h2>
-          <h3>H3 Paragraph H3</h3>
-          <h4>H4 Paragraph H4</h4>
-          <h5>H5 Paragraph H5</h5>
-          <h6>H6 Paragraph H6</h6>
-          <p>p Body p</p>
+        <section id="hero">
+          <div class="hero container" data-aos="fade-up" data-aos-duration="2000">
+            <h1>H1 Paragraph H1</h1>
+            <h2>H2 Paragraph H2</h2>
+            <h3>H3 Paragraph H3</h3>
+            <h4>H4 Paragraph H4</h4>
+            <h5>H5 Paragraph H5</h5>
+            <h6>H6 Paragraph H6</h6>
+            <p>p Body p</p>
+          </div>
         </section>
       </main>
     </div>
 
-    <script src="/js/main.js"></script>
+    <!--BLOCK ANIMATION-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!--MAIN SCRIPTS-->
+    <script src="js/main.js"></script>
   </body>
 </html>

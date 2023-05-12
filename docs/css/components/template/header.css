@@ -1,6 +1,5 @@
 #header {
   width: 100%;
-  height: 80px;
   background-color: #343a40;
   opacity: 0.95;
   display: flex;
@@ -13,8 +12,8 @@
   align-items: center;
   color: #f8f9fa;
 }
-#header .header__logo a img {
-  z-index: 10;
+#header .header__logo {
+  margin-top: 4px;
 }
 #header .header__navbar {
   width: 100%;
@@ -43,7 +42,7 @@
   z-index: 50;
   align-items: center;
   justify-content: flex-end;
-  width: 30px;
+  width: 32px;
   height: 18px;
 }
 #header .header__burger.active span {
@@ -57,49 +56,47 @@
   bottom: 50%;
   transform: rotate(45deg) translate(0, 50%);
 }
-#header .header__burger::before {
+#header .header__burger::after, #header .header__burger::before {
   content: "";
   position: absolute;
-  height: 2px;
+  height: 3px;
   width: 100%;
-  background-color: #f8f9fa;
+  background-color: #fff;
   transition: all 0.3s ease 0s;
+}
+#header .header__burger::before {
   top: 0;
 }
 #header .header__burger::after {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 100%;
-  background-color: #f8f9fa;
-  transition: all 0.3s ease 0s;
   bottom: 0;
 }
 #header .header__burger span {
-  height: 2px;
-  width: 80%;
+  height: 3px;
+  width: 100%;
   transform: scale(1);
-  background-color: #f8f9fa;
+  background-color: #fff;
+  transition: all 0.3s;
 }
 @media (max-width: 992px) {
   #header .header__burger {
     display: flex;
   }
   #header .header__navbar {
-    display: none;
-    flex-direction: column;
     position: fixed;
-    height: 100%;
-    width: 100%;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    margin: 0;
+    opacity: 0;
     z-index: 50;
     overflow-y: auto;
     padding: 50px 40px;
     background-color: #343a40;
-    animation: burgerAnimation 0.4s;
+    transition: all 0.3s;
+  }
+  #header .header__navbar.open {
+    opacity: 1;
   }
   #header .header__navbar .header__menu {
     flex-direction: column;
@@ -107,14 +104,5 @@
     height: 50%;
     align-items: center;
     margin: auto;
-  }
-}
-
-@keyframes burgerAnimation {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
   }
 }
